@@ -12,4 +12,9 @@ dbserver:
     - dataonly
   environment:
     MYSQL_ROOT_PASSWORD: password
-    
+
+dataonly:
+  image: busybox
+  volumes:
+    - /data/mysql:/var/lib/mysql
+
